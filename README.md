@@ -14,8 +14,11 @@ It contains theory notes, code snippets, mini-projects, and hands-on exercises t
 ## 📂 Repository Structure
 
 /theory → Notes and summaries on Java/Spring concepts
+
 /exercises → Small coding challenges and experiments
+
 /projects → Mini-projects demonstrating specific use cases
+
 /resources → Helpful links, articles, and documentation
 
 
