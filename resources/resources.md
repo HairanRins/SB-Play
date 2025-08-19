@@ -17,5 +17,6 @@ Here are some useful resources I use during my learning journey:
 - [Baeldung - Spring Tutorials](https://www.baeldung.com/)
 - [Java Documentation](https://docs.oracle.com/en/java/)
 - [Spring Initializr](https://start.spring.io/)
+- [WayToLearnX – Tutoriels Java](https://waytolearnx.com/java)
 
 ---
