@@ -30,3 +30,8 @@ Cette fonctionnalité de conception permet aux développeurs de construire des a
 Le processus de développement est plus rapide et plus analytique puisque la liaison est un processus progressif et léger.
 
 10- **Haute performance** – Grâce à l’utilisation de compilateurs Just-In-Time(JIT), Java offre des performances élevées.
+
+11- **Distribué** – Java est conçu pour l’environnement distribué.
+
+12- **Dynamique** – Java est considéré plus dynamique que C ou C ++ puisqu’il est conçu pour s’adapter à un environnement en évolution.
+Les programmes Java peuvent transporter une grande quantité d’informations d’exécution qui peuvent être utilisés pour vérifier et résoudre les accès aux objets en exécution.
