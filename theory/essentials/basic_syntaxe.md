@@ -91,3 +91,71 @@ Les librairies ou classes utilitaires n’ont souvent pas de main.
 Depuis Java 21 (et déjà avant), tu peux avoir des tests JUnit, des applications Jakarta EE, du Spring Boot, etc., qui démarrent autrement.
 
 Depuis Java 11+ : on peut même exécuter directement un fichier `.java` sans compilation préalable (`java HelloWorld.java`), mais la présence d’un `main` reste nécessaire si tu veux un vrai point d’entrée.
+
+## Les identifiants en Java
+
+Tous les composants Java nécessitent des noms. Les noms utilisés pour les classes, les variables et les méthodes sont appelés identificateurs.
+
+En Java, il y a plusieurs points à retenir sur les identificateurs. Ils sont les suivants :
+
+- Tous les identificateurs doivent commencer par une lettre (A à Z ou a à z), un caractère de devise ($) ou un trait de soulignement (\_).
+
+- Les identifiants sont sensibles à la casse.
+
+- Exemples d’identifiants légaux: nom, $solde, \_valeur, \_\_1_exemple.
+
+- Exemples d’identificateurs illégaux: 999xyz, -solde.
+
+- En Java 21, les identificateurs peuvent aussi commencer par des lettres Unicode
+  Cela permet d’utiliser des caractères non latins dans les noms de variables, classes ou méthodes.
+  Exemple :
+
+```
+int café = 5;      // valide
+String πValue = "Pi"; // valide
+```
+
+## Les modificateurs Java
+
+Comme d’autres langages, il est possible de modifier des classes, des méthodes, etc., en utilisant des modificateurs.
+Il existe des catégories de modificateurs :
+
+### 1. **Modificateurs d’accès**
+
+Contrôlent **la visibilité** d’une classe, méthode ou variable.
+
+- `public` → accessible partout
+- `protected` → accessible dans le même package + sous-classes
+- `private` → accessible uniquement dans la classe
+- _(aucun mot clé)_ → **package-private** (par défaut, accessible uniquement dans le package)
+
+---
+
+### 2. **Modificateurs sans accès (classiques)**
+
+Contrôlent le **comportement** des classes, méthodes ou variables.
+
+- `final` → empêche modification (classe non héritée, méthode non redéfinie, variable constante)
+- `abstract` → classe/méthode incomplète à implémenter
+- `strictfp` → force les calculs flottants à suivre strictement IEEE 754
+
+---
+
+### 3. **Modificateurs liés au cycle de vie/partage**
+
+- `static` → partagé par toutes les instances, ou défini sans objet
+- `synchronized` → contrôle l’accès multithread
+- `volatile` → assure que la variable est lue/écrite directement en mémoire principale (utile en concurrence)
+- `transient` → exclut un champ lors de la sérialisation
+
+---
+
+### 4. **Modificateurs modernes (Java 17+)**
+
+Introduits avec la programmation orientée **scellée (sealed classes)** :
+
+- `sealed` → limite quelles classes peuvent hériter
+- `non-sealed` → lève la restriction sur une sous-classe d’une classe `sealed`
+- `permits` → liste les classes autorisées à hériter
+
+---
