@@ -159,3 +159,166 @@ Introduits avec la programmation orientée **scellée (sealed classes)** :
 - `permits` → liste les classes autorisées à hériter
 
 ---
+
+## Les variables Java
+
+Voici les types de variables en Java :
+
+- Variables locales
+
+- Variables de classe (variables statiques)
+
+- Variables d’instance (variables non statiques)
+
+En résumé :
+Locale = temporaire, doit être initialisée.
+
+Instance = appartient à chaque objet.
+
+Classe (statique) = partagée par toutes les instances.
+
+## Les tableaux en Java
+
+Les tableaux sont des objets qui stockent plusieurs variables du même type. Toutefois, un tableau lui-même est un objet.
+
+## Enums en Java
+
+Enums ont été introduits dans Java 5.0. Enums restreignent une variable pour avoir seulement quelques valeurs prédéfinies.
+Les valeurs de cette liste énumérée sont appelées enums.
+
+Avec l’utilisation d’enums il est possible de réduire le nombre de bugs dans votre code.
+
+Par exemple, si l’on considère une demande pour un magasin de jus de fruits frais, il serait possible de limiter la taille du verre à petites, moyennes et grandes.
+Cela permettrait de s’assurer qu’il ne permettrait à personne de commander toute taille autre que les petites, moyennes ou grandes.
+
+Exemple :
+
+```
+// Définition de l'énumération
+enum JuiceSize {
+    SMALL, MEDIUM, LARGE
+}
+
+// Classe d'exemple
+public class JuiceOrder {
+    JuiceSize size; // variable de type enum
+
+    // Constructeur
+    public JuiceOrder(JuiceSize size) {
+        this.size = size;
+    }
+
+    // Affichage
+    public void printOrder() {
+        System.out.println("Juice size: " + size);
+    }
+
+    // Main pour tester
+    public static void main(String[] args) {
+        JuiceOrder order1 = new JuiceOrder(JuiceSize.SMALL);
+        JuiceOrder order2 = new JuiceOrder(JuiceSize.LARGE);
+
+        order1.printOrder(); // Juice size: SMALL
+        order2.printOrder(); // Juice size: LARGE
+    }
+}
+```
+
+**Remarque** : les enums peuvent être déclarés comme étant propres ou à l’intérieur d’une classe.
+Méthodes, variables, constructeurs peuvent être définis à l’intérieur des enums.
+
+## Les mots clés de Java
+
+La liste suivante montre les mots-clés réservés en Java. Ces mots réservés ne peuvent pas être utilisés comme constantes ou variables ou tout autre nom d’identifiant.
+
+(reserveJava img)
+
+## Les commentaires en Java
+
+Java prend en charge les commentaires d’une seule ligne et de plusieurs lignes très similaires à C et à C ++.
+Tous les caractères disponibles dans tout commentaire sont ignorés par le compilateur Java.
+
+Exemple :
+
+```
+public class Test {
+
+    /* C'est mon premier programme java.
+     * Ceci affichera 'Hello World!' comme sortie
+     * Ceci est un exemple de commentaires multi-lignes.
+     */
+
+   public static void main(String []args) {
+     // Voici un commentaire en une seul ligne
+     /* Ceci est également un commentaire en une seul ligne. */
+      System.out.println("Hello World!");  // Hello World!
+   }
+}
+```
+
+## Héritage
+
+En Java, une classe peut hérité une autre classe.
+Généralement, si vous avez besoin de créer une nouvelle classe et vous avez déjà une classe qui a une partie du code dont vous avez besoin, alors il est possible d’hériter cette classe.
+Ce concept vous permet de réutiliser les champs et les méthodes de la classe existante sans devoir réécrire le code dans une nouvelle classe.
+Dans ce scénario, la classe existante est appelée superclasse ou classe mère et la classe héritée est appelée sous-classe ou classe fille.
+
+Exemple: Ici, `Animal` est la superclasse, et `Dog` est une sous-classe qui hérite.
+
+```
+// Superclasse (classe mère)
+class Animal {
+    void eat() {
+        System.out.println("This animal eats food.");
+    }
+}
+
+// Sous-classe (classe fille)
+class Dog extends Animal {
+    void bark() {
+        System.out.println("The dog barks.");
+    }
+}
+
+public class InheritanceExample {
+    public static void main(String[] args) {
+        Dog myDog = new Dog();
+        myDog.eat();  // hérité de Animal
+        myDog.bark(); // méthode spécifique à Dog
+    }
+}
+```
+
+## Interfaces
+
+En langage Java, une interface peut être définie comme un contrat entre les objets sur la façon de communiquer les uns avec les autres.
+Interfaces jouent un rôle vital quand il s’agit de la notion d’héritage.
+Une interface définit les méthodes, qui doivent être utiliser par une classe dérivée (sous-classe). Mais la mise en œuvre des méthodes est totalement dans la sous-classe.
+
+Exemple : Ici, `Playable` définit une méthode que `Guitar` doit implémenter.
+
+```
+// Interface (contrat)
+interface Playable {
+    void play();
+}
+
+// Classe qui implémente l'interface
+class Guitar implements Playable {
+    @Override
+    public void play() {
+        System.out.println("The guitar is playing.");
+    }
+}
+
+public class InterfaceExample {
+    public static void main(String[] args) {
+        Playable instrument = new Guitar();
+        instrument.play();
+    }
+}
+```
+
+- **Héritage (extends)** → réutilisation d’une classe existante.
+
+- **Interface (implements)** → définir un contrat que la classe doit respecter.
