@@ -231,7 +231,7 @@ Méthodes, variables, constructeurs peuvent être définis à l’intérieur des
 
 La liste suivante montre les mots-clés réservés en Java. Ces mots réservés ne peuvent pas être utilisés comme constantes ou variables ou tout autre nom d’identifiant.
 
-(reserveJava img)
+<img width="987" height="644" alt="reserveJava" src="https://github.com/user-attachments/assets/9ee806ab-7aad-464e-9f9e-c3ef0ee366d0" />
 
 ## Les commentaires en Java
 
