@@ -215,7 +215,8 @@ Remarque – Si les variables sont accessibles à partir d’une classe externe,
 
 ---
 
-(img)
+![Capture d’écran_31-8-2025_1221_chatgpt com](https://github.com/user-attachments/assets/1bbf767b-b8ec-434e-9699-494475b4ded8)
+
 
 Exemple simple pour comparer :
 
