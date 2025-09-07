@@ -8,9 +8,8 @@ package fundamentals.datatypes;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
-public class Operaions {
+public class Operations {
     public static void main(String args[]) {
         // 1. Arithmetic Operations
         System.out.println("=== Arithmetic Operations ===");

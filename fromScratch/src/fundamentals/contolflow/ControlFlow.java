@@ -118,5 +118,23 @@ public class ControlFlow {
         System.out.println("Grades: " + grades);
         System.out.println("Number of passing grades (>= 70): " + passingCount);
 
+        // 6. Java 21 Pattern Matching in Switch (Preview Feature)
+        System.out.println("\n=== Java 21 Pattern Matching (Preview) ===");
+        Object obj = "Hello, Java!";
+        String result = switch (obj) {
+            case String s -> "Object is a String: " + s;
+            case Integer i -> "Object is a Integer: " + i;
+            case null -> "Object is a null";
+            default -> "Unknown type";
+        };
+        System.out.println(result);
     }
 }
+
+// Experiment:
+
+ // Change the score value to test different grades.
+ // Modify the day variable to explore other switch cases.
+ // Add a loop to calculate the average of the grades list.
+ // Trigger an infinite loop (e.g., while (true)) and fix it with a break condition.
+
