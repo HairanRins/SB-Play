@@ -5,6 +5,10 @@
 // Break and Continue: To control loop execution.
 // Java 21 Features: Enhanced switch with arrow syntax (->) and pattern matching for cleaner code.
 
+// Best Practices:
+// Keep conditions clear and avoid nested if statements when possible.
+// Use Java 21’s switch expressions for concise code.
+// Ensure loops have clear exit conditions to avoid infinite loops.
 
 package fundamentals.contolflow;
 

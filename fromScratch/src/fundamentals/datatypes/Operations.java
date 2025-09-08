@@ -4,6 +4,12 @@
 // Bitwise Operations: &, |, ^, ~, <<, >>, >>> (for low-level bit manipulation)
 // String Operations: Concatenation (+), and methods like toUpperCase(), substring()
 
+
+// Best Practices:
+// Use parentheses to clarify operator precedence.
+// Check for null or invalid inputs to avoid errors (e.g., NullPointerException).
+// Use StringBuilder for heavy string concatenation in loops.
+
 package fundamentals.datatypes;
 
 import java.util.ArrayList;
