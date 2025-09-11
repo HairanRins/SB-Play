@@ -75,7 +75,7 @@ public class VariablesAndScopes {
         System.out.println("\n=== Scope and Shadowing ===");
         int shadowVar = 100;
         System.out.println("Outside block, shadowVar: " + shadowVar); // 100
-        
+
         {
             int shadowVarInner = 200;
             System.out.println("Inside block, shadowVarInner: " + shadowVarInner); // 200
@@ -83,5 +83,36 @@ public class VariablesAndScopes {
             System.out.println("Inside block, outer shadowVar: " + shadowVar); // 100
         }
         System.out.println("Outside block again, shadowVar: " + shadowVar); // 100
+
+        // 6. Common Issue: Uninitialized Local Variable
+        System.out.println("\n=== Common Issue: Uninitialized Variable ===");
+        int unitializedLocal; // Local variable, not initialized
+        // System.out.println(uninitializedLocal); // Error: variable might not be initialized
+        unitializedLocal = 42; // Initialize before use
+        System.out.println("Uninitialized local: " + unitializedLocal);
+
+        // 7. Combining with Control Flow and Operations
+        System.out.println("\n=== Combining with Control Flow and Operations ===");
+        String gradeCategory;
+        // Using switch expression (from previous context) with instance variable
+        gradeCategory = switch ((int) student1.instanceGrade) {
+            case 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100 -> "A";
+            case 80, 81, 82, 83, 84, 85, 86, 87, 88, 89 -> "B";
+            case 70, 71, 72, 73, 74, 75, 76, 77, 78, 79 -> "C";
+            default -> student1.instanceGrade < 70 ? "D" : "Invalid";
+        };
+        System.out.println("Grade category: " + gradeCategory);
+
+        // 8. Java 21 Record for Structured Data
+        System.out.println("\n=== Java 21 Record with Variables ===");
+        record StudentRecord(String name, double grade) {} // Record with instance-like fields
+        StudentRecord recordStudent = new StudentRecord("Charlie", 78.5);
+        System.out.println("Record student: " + recordStudent.name() + ", Grade: " + recordStudent.grade());
+
+        }
+    // Method to demonstrate instance variable access
+    public void printStudentInfo() {
+        System.out.println("Student: " + instanceName + ", Grade: " + instanceGrade);
+        System.out.println("Total students: " + studentCount);
     }
 }
